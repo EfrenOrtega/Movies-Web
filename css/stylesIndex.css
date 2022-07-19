@@ -55,13 +55,21 @@ header h1{
     padding: 1.5em;
 }
 
-.hero{
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center
+}
+
+.hero-mobile, .hero-pc{
     position: fixed;
     z-index: -1;
+    left: 0;
     width: 100%;
 }
 
-.hero::after{
+.hero-mobile::after{
     content: "";
     position: absolute;
     top: 0;
@@ -71,10 +79,15 @@ header h1{
     background: linear-gradient(180deg, rgba(0,0,17,0.94) 0%, rgba(5,5,24,0.7) 30%, rgba(4,4,20,0.4) 60%, rgba(3,3,15,0.25) 84%, rgba(0,0,0,0) 100%);
 }
 
-.hero img{
+.hero-mobile img{
     height: 100%;
     width: 100%;
     object-fit: fill;
+}
+
+
+.menu{
+    min-width: 24em;
 }
 
 .menu nav ul{
@@ -89,25 +102,52 @@ header h1{
 .search{
     margin: auto;
     padding: 1em;
+    min-width: 100%;
 }
 
-.search img{
-    width: 4.75em;
-    height: 3.25em;
+
+.search .search-flex{
+    background-color: #FFFFFF;
+    border-radius: 1.5em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+
+    margin: auto;
+    width: 9em;
+    height: 3.4em;
+
+    box-shadow: 0.0625em 0.15em 0.375em #0088FF;
+}
+
+
+svg{
+    width: 40%;
+    height: 80%;
+    fill:#8E8E8E;
+} 
+
+p{  
+    font-size: 1.3em;
+    font-family: 'Roboto';
+    width: 50%;
+    color:#8E8E8E
 }
 
 .avatar{
     margin: auto;
     border-radius: 6.25em;
-    width: 4.06em;
-    height: 4.06em;
+    width: 5.06em;
+    height: 5.06em;
     overflow: hidden;
     box-shadow: 0.0625em 0.15em 0.375em #0088FF;
 }
 
 .avatar img{
-    width: 4.06em;
-    height: 4.06em;
+    width: 5.06em;
+    height: 5.06em;
     object-fit: cover;
 }
 
@@ -138,8 +178,6 @@ header h1{
 }
 
 
-
-
 main{
     margin-bottom: 5em;
 }
@@ -154,3 +192,39 @@ footer{
 }
 
 
+.hero-pc{
+    display: none;
+}
+
+@media only screen and (min-width : 768px) {
+
+    html{
+        font-size: 16px;
+    }
+
+    .hero-mobile{
+        display: none;
+    }
+
+    .hero-pc{
+        display: inline;
+    }
+
+    .search{
+        min-width: fit-content;
+        margin-right: 0;
+    }
+
+    .search .search-flex{
+        width: 7.75em;
+        height: 2.65em;
+    }
+
+    header h1{
+        font-size: x-large;
+    }
+
+    .avatar{
+        margin:auto 2em;
+    }
+}
