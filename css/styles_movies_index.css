@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+.movies{
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.movie{
+    margin-right: 0.8em;
+}
+
+[class*="container-movies-"]{
+    text-align: left;
+    margin:1.5em 0 1.5em 1.5em;
+    letter-spacing:0.1em;
+}
+
+[class*="container-movies-"] p{
+    font-weight: 300;
+}
+
+[class*="section-"] picture img{
+    display: block;
+    scroll-snap-align: center;
+}
+
+[class*="section-popular-movies"] picture{
+    display: block;
+    width: 9.5em;
+}
+
+.title-section{
+    display: flex;
+    align-items: center;
+    margin-bottom:1em;
+}
+
+.hrLine{
+    margin-left: 1em;
+    width: 100%;
+}
+
+.section-top-movies{
+    display: none;
+}
+
+
+@media only screen and (min-width:1035px){
+
+    .section-top-movies{
+        display: block;
+        margin-top: 2.5em;
+        height: max-content;
+        
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-top-movies .movies-top{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+    }
+
+    .section-top-movies .movies-top::after{
+        position: absolute;
+        content:"";
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0,0,17,0.9332107843137255) 0%, rgba(0,0,14,0.7) 16%, rgba(0,0,8,0) 35%, rgba(0,0,6,0) 66%, rgba(0,0,1,0.7) 81%, rgba(0,0,0,1) 100%);
+
+    }
+
+    .section-top-movies .movies-top{
+        display: flex;
+    }
+
+    .section-top-movies .movie{
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    .section-top-movies .movies-top .movie:nth-child(2){
+        transform: scale(1.2);
+    }
+  
+    .section-top-movies .movies-top .movie span{
+        visibility: hidden;
+        opacity: 0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 999;
+        content:"";
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0,0,17,.98) 0%, rgba(5,5,24,0.3) 20%, rgba(4,4,20,0.4) 30%, rgba(3,3,15,0.21) 84%, rgba(0,0,0,0) 100%);
+
+        transition: 0.2s ease-in;
+    }
+
+    .section-top-movies .movies-top .movie span img:hover{
+        cursor: pointer;
+    }
+
+    .section-top-movies .movies-top .movie span.is-active{
+        visibility: visible;
+        opacity: 100%;
+    }
+
+
+    .movie{
+        margin-right: 1.5em;
+    }
+
+    .section-top-movies .movies-top .movie:nth-child(3){
+        margin-right: 0em;
+    }
+
+    [class*="section-top-movies"] picture img{
+        width: 10em;
+        scroll-snap-align: center;
+    }
+}
