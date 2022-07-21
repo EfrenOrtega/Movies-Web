@@ -3,6 +3,8 @@
 :root{
     --font-simple : white;
     --backGcolor : #000011;
+    --btnColor : #D20909;
+    --shadow : #000000;
 }
 
 *{
@@ -152,10 +154,10 @@ header::after{
     overflow: hidden;
 
     margin: auto;
-    width: 9em;
-    height: 2.8em;
+    width: 10em;
+    height: 2.5em;
 
-    box-shadow: 0.0625em 0.15em 0.375em #0088FF;
+    box-shadow: 0.0625em 0.15em 0.375em var(--shadow);
     transition: 0.3s all ease-in-out;
 }
 
@@ -182,7 +184,7 @@ svg{
     width: 5.06em;
     height: 5.06em;
     overflow: hidden;
-    box-shadow: 0.0625em 0.15em 0.375em #0088FF;
+    box-shadow: 0.0625em 0.15em 0.375em var(--shadow);
 }
 
 .avatar img{
@@ -195,7 +197,7 @@ svg{
     padding: 1em;
 }
 
-.btns-mobil{
+[class*='btns-']{
     margin-top: 1em;
     display: grid;
     grid-template-columns: 100%;
@@ -215,10 +217,13 @@ svg{
 }
 
 .btn-watch-now{
-    background-color: #3271AD;
+    background-color: var(--btnColor);
     color:var(--font-simple);
 }
 
+.btn-watch-list{
+    font-weight: normal;
+}
 
 main{
     margin-bottom: 5em;
@@ -237,13 +242,13 @@ footer{
     display: none;
 }
 
-@media only screen and (min-width : 0px) and (max-width:400px){
+@media only screen and (min-width : 0px) and (max-width: 480px){
     .btns-mobil{
         padding: 0;
     }
 }
 
-@media only screen and (min-width : 481px) and (min-height: 321px){
+@media only screen and (min-width : 481px) and (min-height: 321px) and (max-width:767px){
     html{
         font-size: 16px;
     }
@@ -253,95 +258,144 @@ footer{
     }
 }
 
-@media only screen and (min-width: 768px) and (min-height: 1024px){
+@media only screen and (min-width: 768px) and (max-width:960px){
     html{
-        font-size: 16px;
+        font-size: 15px;
     }
 
-    header{
+    .container header{
         background-image: url('../img/hero-pc.png');
         background-repeat: no-repeat;
-        background-size: contain;
-        background-attachment: fixed;
-        background-position: top;
-        height: auto;
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: center;
+        height: auto;        
     }
-
-    .menu-hamburger{
+    
+    header::after{
+        height: 80%;
+        background: linear-gradient(180deg, rgba(0,0,17,.80) 0%, rgba(0,0,0,0) 30%);
+    }
+    
+    .info-mobile, .search, .avatar{
         display: none;
     }
 
-    .menu, .search, .avatar{
-        display: block;
+    .info-pc{
+        display: inline-block;
     }
 
-    .menu{
-        display: flex;
-        align-items: center;
+    .menu-hamburger{
+        justify-content: space-between;
+        padding-right: 5em;
+        padding-left: 5em;
+    }
+
+    .btns-pc{
+        margin: 0;
         justify-content: center;
+        grid-template-columns: repeat(2, 15em);
     }
 
-    .menu .logo{
-        min-width: 15em;
+    .info-pc{
+        font-size: 13px;
+        position: relative;
+        
+        z-index: 9999;
+        padding:1em 1em 0.5em 1em;
+        margin-bottom: 0.5em;
+        width: 50%;
+        margin-top: 1em;
     }
 
-
-    .avatar{
-        margin-left: 0;
+    .info-pc p{
+        display: none;
     }
-
+    
+    .valoration-stars{
+        text-align: center;
+    }
+    
+    .info-pc::after{
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 17, .50);
+        z-index: -1;
+    }
 }
 
 @media only screen and (min-width : 961px){
 
     html{
-        font-size: 16px;
+        font-size: 18px;
     }
 
-    .hero-mobile, .info-mobile{
+    .flex{
+        padding-top:1.4em;
+        justify-content: space-around;
+    }
+    
+    .container header{
+        background-image: url('../img/hero-pc.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: center;
+        height: auto;  
+    }
+
+    header::after{
+        height: 80%;
+        background: linear-gradient(180deg, rgba(0,0,17,.90) 0%, rgba(0,0,0,0) 20%);
+    }
+
+    .hero-mobile, .info-mobile, .menu-hamburger{
         display: none;
     }
 
-    .hero-pc, .info-pc{
-        display: block;
+    .hero-pc, .menu, .search, .avatar, .info-pc{
+        display: inline-block;
     }
 
-    .search{
-        min-width: fit-content;
-        margin-right: 0;
+    .menu{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        width: max-content;
     }
 
-    .search .search-flex{
-        width: 7.75em;
-        height: 2.65em;
-        box-shadow: 0.0625em 0.15em 0.2em #000000;
+    .menu a{
+        padding: 0 0.5em;
     }
-
+    
     .search-flex.is-active{
         width: 20em;
     }
 
-    header h1{
-        padding: 0.5em;
-        font-size: 3em;
-        letter-spacing: 0.3em;
+    .info-pc-container{
+        width: fit-content;
+        margin-bottom: 1em;
+        margin-left: 2em;
     }
 
-    .avatar{
-        margin:auto 2em;
-        font-size: 14px;
-    }
-
-    /*PRUEBA SECTION INFO-PC*/
     .info-pc{
         position: relative;
-        width: 30em;
-        padding: 1em;
+        padding:1em 1.5em 0.5em 1.5em;
         margin: 1em;
+        z-index: 9999;
+        width: 32em;
     }
 
     .info-pc p{
         text-align: justify;
+        font-size: 1.1em;
+        font-weight: 300;
     }
 
     .valoration-stars{
@@ -355,14 +409,45 @@ footer{
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 17, .30);
+        background-color: rgba(0, 2, 18, 0.50);
         z-index: -1;
     }
 
     .info-pc button{
-        font-size: 14px;
+        font-size: 15px;
+        height: 3em;
         margin: 1em 1.5em 0 1.5em;
     }
+
+    .btn-watch-now{
+        font-weight: bold;
+    }
+
+    .menu .logo{
+        min-width: 16em;
+    }
+
+    
+    .search{
+        font-size: 14px;
+        padding-left: 2.5em;
+        padding-right: 1.5em;
+        margin-right: 1em;
+        margin:0.3em 0;
+    }
+
+    .avatar{
+        font-size: 14px;
+        margin-left: 1em;
+        margin:0.3em 0;
+    }
+
+    .btns-pc{
+        margin: 0;
+        justify-content: center;
+        grid-template-columns: repeat(2, 15em);
+    }
+    
 }
 
 
