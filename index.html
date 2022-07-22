@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/stylesMenuMobile.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles_movies_index.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -101,18 +102,24 @@
 
 
         </header>
-        <main>
-
+        <main class="main-content">
             <div class="container-main">
 
-                <section class="section-top-movies">
+                <section class="section-top-movies-pc">
+                    <div class="container-info-movies">
+                        <p class="title-section"><strong>TOP</strong></p>
+                        <p class="description-section">The top 3 this Week</p>
+                    </div>    
                     <div class="movies-top">
                             <article class="movie">
                                 <picture>
                                     <source srcset="img/Movie-A-quiet-Place-Part-II-pc.png" media="(min-width: 1035px)">
                                     <img loading="lazy" src="./img/Movie-A-quiet-Place-Part-II.png" alt="A quite place part II">
                                 </picture> 
-                                <span><img src="./img/btn-play.png" alt="Play"></span>                               
+                                <span>
+                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                    <img src="./img/btn-play.png" alt="Play">
+                                </span>                               
                             </article>                        
 
                             <article class="movie">
@@ -120,7 +127,10 @@
                                     <source srcset="img/Movie-Joker-large.png" media="(min-width: 1035px)">
                                     <img loading="lazy" src="./img/Movie-Joker.png" alt="Joker">
                                 </picture>  
-                                <span><img src="./img/btn-play.png" alt="Play"></span>                                                             
+                                <span>
+                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                    <img src="./img/btn-play.png" alt="Play">
+                                </span>  
                             </article>
 
                             <article class="movie">
@@ -128,60 +138,242 @@
                                     <source srcset="img/Movie-Dune-large.png" media="(min-width: 1035px)">
                                     <img loading="lazy" src="./img/Movie-Dune.png" alt="Joker">
                                 </picture>   
-                                <span><img src="./img/btn-play.png" alt="Play"></span>                                                            
+                                <span>
+                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                    <img src="./img/btn-play.png" alt="Play">
+                                </span>  
                             </article>
                     </div>
                 </section>
 
-                <section class="section-popular-movies">
+                <section class="section-movies">
                     <div class="container-movies-1">
-                        <div class="title-section"><p><strong>Movies</strong></p><hr class="hrLine"></div>
-                        <div class="movies">
+                        <div class="container-info-movies">
+                            <p class="title-section"><strong>Movies</strong></p>
+                            <p class="description-section">Recommended Movies</p>
+                        </div>                        
+                        <div class="container-gradient">
+                            <div class="movies">
+                                <article class="movie">
+                                    <picture>
+                                        <source srcset="img/Movie-A-quiet-Place-Part-II-pc.png" media="(min-width: 1035px)">
+                                        <img loading="lazy" src="./img/Movie-A-quiet-Place-Part-II.png" alt="A quite place part II">
+                                    </picture>     
+                                    <span>
+                                        <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                        <img src="./img/btn-play.png" alt="Play">
+                                    </span> 
+                                </article>
+
+                                <article class="movie">
+                                    <picture>
+                                        <source srcset="img/Movie-Joker-large.png" media="(min-width: 1035px)">
+                                        <img loading="lazy" src="./img/Movie-Joker.png" alt="Joker">
+                                    </picture>    
+                                    <span>
+                                        <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                        <img src="./img/btn-play.png" alt="Play">
+                                    </span> 
+                                </article>
+
+                                <article class="movie">
+                                    <picture>
+                                        <source srcset="img/Movie-Dune-large.png" media="(min-width: 1035px)">
+                                        <img loading="lazy" src="./img/Movie-Dune.png" alt="Joker">
+                                    </picture>    
+                                    <span>
+                                        <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                        <img src="./img/btn-play.png" alt="Play">
+                                    </span> 
+                                </article>
+
+                                <article class="movie">
+                                    <picture>
+                                        <source srcset="img/Movies-Avengers-End-Game-large.png" media="(min-width: 1035px)">
+                                        <img loading="lazy" src="./img/Movies-Avengers-End-Game.png" alt="Joker">
+                                    </picture>
+                                    <span>
+                                        <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                        <img src="./img/btn-play.png" alt="Play">
+                                    </span> 
+                                </article>
+
+                                <article class="movie">
+                                    <picture>
+                                        <source srcset="img/Movie-Joker-large.png" media="(min-width: 1035px)">
+                                        <img loading="lazy" src="./img/Movie-Joker.png" alt="Joker">
+                                    </picture>    
+                                    <span>
+                                        <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                        <img src="./img/btn-play.png" alt="Play">
+                                    </span> 
+                                </article>
+
+                                <article class="movie">
+                                    <picture>
+                                        <source srcset="img/Movie-A-quiet-Place-Part-II-pc.png" media="(min-width: 1035px)">
+                                        <img loading="lazy" src="./img/Movie-A-quiet-Place-Part-II.png" alt="A quite place part II">
+                                    </picture>     
+                                    <span>
+                                        <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                        <img src="./img/btn-play.png" alt="Play">
+                                    </span> 
+                                </article>
+
+                                <article class="movie">
+                                    <picture>
+                                        <source srcset="img/Movie-Dune-large.png" media="(min-width: 1035px)">
+                                        <img loading="lazy" src="./img/Movie-Dune.png" alt="Joker">
+                                    </picture>    
+                                    <span>
+                                        <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                        <img src="./img/btn-play.png" alt="Play">
+                                    </span> 
+                                </article>
+
+                                <article class="movie">
+                                    <picture>
+                                        <source srcset="img/Movie-A-quiet-Place-Part-II-pc.png" media="(min-width: 1035px)">
+                                        <img loading="lazy" src="./img/Movie-A-quiet-Place-Part-II.png" alt="A quite place part II">
+                                    </picture>     
+                                    <span>
+                                        <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                        <img src="./img/btn-play.png" alt="Play">
+                                    </span> 
+                                </article>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-movies">
+                    <div class="container-movies-1">
+                        <div class="container-info-movies">
+                            <p class="title-section"><strong>Movies</strong></p>
+                            <p class="description-section">Recommended Movies</p>
+                        </div>
+                        <div class="container-gradient">
+                            <div class="movies">
                             <article class="movie">
                                 <picture>
                                     <source srcset="img/Movie-A-quiet-Place-Part-II-pc.png" media="(min-width: 1035px)">
                                     <img loading="lazy" src="./img/Movie-A-quiet-Place-Part-II.png" alt="A quite place part II">
-                                </picture>                                
+                                </picture>     
+                                <span>
+                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                    <img src="./img/btn-play.png" alt="Play">
+                                </span> 
                             </article>
 
                             <article class="movie">
                                 <picture>
                                     <source srcset="img/Movie-Joker-large.png" media="(min-width: 1035px)">
                                     <img loading="lazy" src="./img/Movie-Joker.png" alt="Joker">
-                                </picture>                                
+                                </picture>    
+                                <span>
+                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                    <img src="./img/btn-play.png" alt="Play">
+                                </span> 
                             </article>
 
                             <article class="movie">
                                 <picture>
                                     <source srcset="img/Movie-Dune-large.png" media="(min-width: 1035px)">
                                     <img loading="lazy" src="./img/Movie-Dune.png" alt="Joker">
-                                </picture>                                
+                                </picture>    
+                                <span>
+                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                    <img src="./img/btn-play.png" alt="Play">
+                                </span> 
                             </article>
 
                             <article class="movie">
                                 <picture>
                                     <source srcset="img/Movies-Avengers-End-Game-large.png" media="(min-width: 1035px)">
                                     <img loading="lazy" src="./img/Movies-Avengers-End-Game.png" alt="Joker">
-                                </picture>                                
+                                </picture>
+                                <span>
+                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                    <img src="./img/btn-play.png" alt="Play">
+                                </span> 
                             </article>
 
-                        </div>
-                    </div>
+                            <article class="movie">
+                                <picture>
+                                    <source srcset="img/Movie-Joker-large.png" media="(min-width: 1035px)">
+                                    <img loading="lazy" src="./img/Movie-Joker.png" alt="Joker">
+                                </picture>    
+                                <span>
+                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                    <img src="./img/btn-play.png" alt="Play">
+                                </span> 
+                            </article>
 
-                    <div class="container-movies-2">
-                        <div class="title-section"><p><strong>Movies</strong></p><hr class="hrLine"></div>
-                        <div class="movies">
+                            <article class="movie">
+                                <picture>
+                                    <source srcset="img/Movie-A-quiet-Place-Part-II-pc.png" media="(min-width: 1035px)">
+                                    <img loading="lazy" src="./img/Movie-A-quiet-Place-Part-II.png" alt="A quite place part II">
+                                </picture>     
+                                <span>
+                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                    <img src="./img/btn-play.png" alt="Play">
+                                </span> 
+                            </article>
 
-                            <!--HERE-->
+                            <article class="movie">
+                                <picture>
+                                    <source srcset="img/Movie-Dune-large.png" media="(min-width: 1035px)">
+                                    <img loading="lazy" src="./img/Movie-Dune.png" alt="Joker">
+                                </picture>    
+                                <span>
+                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                    <img src="./img/btn-play.png" alt="Play">
+                                </span> 
+                            </article>
 
+                            <article class="movie">
+                                <picture>
+                                    <source srcset="img/Movie-A-quiet-Place-Part-II-pc.png" media="(min-width: 1035px)">
+                                    <img loading="lazy" src="./img/Movie-A-quiet-Place-Part-II.png" alt="A quite place part II">
+                                </picture>     
+                                <span>
+                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                                    <img src="./img/btn-play.png" alt="Play">
+                                </span> 
+                            </article>
+
+                            </div>
                         </div>
                     </div>
                 </section>
 
             </div>
-
         </main>
-        <footer>dwd</footer>
+        <footer>
+            <div class="container-footer">
+                <hr class="hrLine-footer">
+
+                <div class="flex-footer">
+                    <article class="social-medias">
+                        <a href=""><img class="logo-footer" src="./img/MOVIES_Logo.png" alt=""></a><br>
+                        <a href=""><img src="./img/icon_facebook.png" alt="Facebook">
+                        <a href=""><img src="./img/icon_twitter.png" alt="Twitter"></a>
+                    </article>
+                    <article class="menu-footer">
+                        <a href="">Home</a>
+                        <a href="">Watch List</a>
+                        <a href="">Genres</a>
+                    </article>
+                    <article class="developer">
+                        <a href=""><img src="./img/replit.png" alt="Replit"></a>
+                        <a href=""><img src="./img/github-small.png" alt="Github"></a>
+                        <p>Developed by Jair Efren Ortega Reyes</p>
+                    </article>
+                </div>
+
+            </div>
+        </footer>
     </div>
 
     <div class="menu-mobile">
