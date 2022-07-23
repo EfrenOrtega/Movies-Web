@@ -348,10 +348,12 @@ footer{
         background-image:none;
         text-align: center;
         height: auto !important;
+
     }
 
     header::after{
         height: 100%;
+        background: linear-gradient(180deg, rgba(2,7,28,1) 0%, rgba(2,7,28,0.6054796918767507) 15%, rgba(2,7,28,0.1292892156862745) 44%, rgba(2,7,28,0.09007352941176472) 58%, rgba(2,7,28,0.5802696078431373) 90%, rgba(2,7,28,1) 100%);
     }
 
     .hero-mobile, .info-mobile, .menu-hamburger{
