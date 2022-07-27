@@ -39,6 +39,9 @@ footer hr{
     margin-top: 3em;
 }
 
+.flex-footer .API-footer img{
+   width: 5em;
+}
 
 @media only screen and (min-width:1035px){
 

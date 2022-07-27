@@ -33,6 +33,8 @@
 
 
 .container-info-movies .flex{
+    width: 100%;
+    display: flex;
     justify-content:flex-start;
     padding: 0;
     margin: 0;
@@ -49,10 +51,10 @@
 
 .movies{
     display: flex;
-    scroll-snap-type: x mandatory;
     overflow-x: scroll;
     overflow-y: hidden;
     padding-left:1.5em;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -77,6 +79,7 @@
 [class*="section-"] picture img{
     display: block;
     scroll-snap-align: center;
+    border-radius: 0.3em;
 }
 
 [class*="section-movies"] picture{
@@ -85,9 +88,11 @@
 }
 
 .container-info-movies{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom:1em;
     padding-left:2em
-
 }
 
 .container-info-movies p{
@@ -98,7 +103,7 @@
     letter-spacing:0em;
 }
 
-/*.section-top-movies-pc{
+/*.section-top-movies{
     display: none;
 }*/
 
@@ -152,7 +157,7 @@
 }
 
 
-.section-top-movies-pc{
+.section-top-movies{
     animation:zoomOpacity 1.5s;
 }
 
@@ -225,7 +230,7 @@
     font-size: 1em;
 }
 
-.section-top-movies-pc .movies-top{
+.section-top-movies .movies-top{
     margin:2em auto;
     position: relative;
     display: flex;
@@ -234,7 +239,7 @@
     width: 90%;
 }
 
-.section-top-movies-pc{
+.section-top-movies{
     display: block;
     margin-top: 2.5em;
     height: max-content;
@@ -244,18 +249,18 @@
 }
 
 
-.section-top-movies-pc .container-info-movies{
+.section-top-movies .container-info-movies{
     margin: 0;
     padding: 0;
 }
 
-.section-top-movies-pc .container-info-movies p{
+.section-top-movies .container-info-movies p{
     font-size: 20px;
     padding:0;
     margin: 0;
 }
 
-.section-top-movies-pc .movies-top{
+.section-top-movies .movies-top{
     margin:2em auto;
     position: relative;
     display: flex;
@@ -264,7 +269,7 @@
     width: max-content;
 }
 
-.section-top-movies-pc .movies-top::after{
+.section-top-movies .movies-top::after{
     position: absolute;
     content:"";
     top: 0;
@@ -275,22 +280,22 @@
 
 }
 
-.section-top-movies-pc .movies-top{
+.section-top-movies .movies-top{
     display: flex;
 }
 
-.section-top-movies-pc .movie{
+.section-top-movies .movie{
     position: relative;
     overflow: hidden;
     width: 6.5em;
 }
 
 
-.section-top-movies-pc .movies-top .movie:nth-child(2){
+.section-top-movies .movies-top .movie:nth-child(2){
     transform: scale(1.2);
 }
 
-.section-top-movies-pc .movies-top .movie span{
+.section-top-movies .movies-top .movie span{
     visibility: hidden;
     opacity: 0;
     display:flex;
@@ -308,28 +313,46 @@
     transition: 0.2s ease-in;
 }
 
-.section-top-movies-pc .movies-top .movie span img:hover{
+.section-top-movies .movies-top .movie span img:hover{
     cursor: pointer;
 }
 
-.section-top-movies-pc .movies-top .movie span.is-active{
+.section-top-movies .movies-top .movie span.is-active{
     visibility: visible;
     opacity: 100%;
 }
 
 
-.section-top-movies-pc .movies-top .movie span .btn-add-watch-list{
+.section-top-movies .movies-top .movie span .btn-add-watch-list{
     position: absolute;
     top:1em;
     right:1em;
 }
 
 .movie{
-    margin-right: 1.5em;
+    margin-right: 1em;
 }
 
-.section-top-movies-pc .movies-top .movie:nth-child(3){
+.section-top-movies .movies-top .movie:nth-child(3){
     margin-right: 0em;
+}
+
+.arrows{
+    padding-right: 0.5em;
+}
+
+.arrows img{
+    margin-right: 1em;
+}
+
+.arrows img:hover{
+    cursor:pointer;
+}
+
+.section-top-movies .container-info-movies{
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom:1em;
 }
 
 @media only screen and (min-width:1035px){
@@ -360,7 +383,7 @@
 
     [class*="section-movies"] picture{
         display: block;
-        width: 11em;
+        width: 10em;
     }
 
     [class*="section-movies"] .movie{
@@ -412,7 +435,7 @@
         margin: auto;
     }
 
-    .section-top-movies-pc .movie{
+    .section-top-movies .movie{
         position: relative;
         overflow: hidden;
         width: 11em; 
