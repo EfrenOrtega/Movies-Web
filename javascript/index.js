@@ -5,9 +5,17 @@ import newMovies from './new_movies.js';
 import upcoming from './upcoming.js';
 import search from './search.js';
 
-trendsMovie();
-newMovies();
-upcoming();
-search();
+if(location.pathname === '/'){
+    trendsMovie();
+    newMovies();
+    upcoming();
+    
+    actionButtons();
+}
 
-actionButtons();
+
+if(location.pathname === '/search.html'){
+    search();
+    actionButtons();
+}
+

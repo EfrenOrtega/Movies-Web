@@ -1,6 +1,7 @@
 
 main{
     padding-top: 2em;
+    min-height: 30em;
 }
 
 .container-main input[type="search"]{
@@ -48,6 +49,50 @@ input[type="search"]::-webkit-search-cancel-button {
     position: absolute;
     z-index: 1;
     left: 0.7em;
+    top: 0.25em;
     fill: white;
     width: 1.5em;
+}
+
+.sk-wave{
+    display: none;
+    margin: auto;
+    filter: invert(1);
+}
+
+.sk-wave.is-active{
+    display: flex;
+}
+
+.searches-image .section-movies p{
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 1em;
+}
+
+.searches-image{
+    margin-top: 3em;
+}
+
+
+#searches .movie{
+    font-size: 12px;
+}
+
+#searches .movies-search{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movies-search .movie{
+    margin-bottom: 1em;
+}
+
+#warn{
+    display: none;
+}
+
+#warn.is-active{
+    display: inline-block;
 }
