@@ -7,32 +7,53 @@ export default function buttons(){
           $btnSoundOff = document.getElementById('sound-off'),
           $btnMenu = document.getElementById('menu-hamburger'),
           $menuMobile = document.querySelector('.menu-mobile'),
-          $menuMobileClose = document.getElementById('btn-close-menu')
+          $menuMobileClose = document.getElementById('btn-close-menu'),
+          $watchTrailer = document.getElementById('watch-trailer'),
+          $trailer = document.querySelector('.video-trailer');
 
-            document.addEventListener('click', e=>{
-                switch(e.target){
+        document.addEventListener('click', e=>{
 
-                    case $btnSoundOff:
-                        $videoHeader.muted = false;
-                        e.target.style = 'display: none';
-                        $btnSoundOn.style = 'display: inline-block';
-                    break;
+            switch(e.target){
 
-                    case $btnSoundOn:
-                        $videoHeader.muted = true;
-                        e.target.style = 'display: none';
-                        $btnSoundOff.style = 'display: inline-block';
-                    break;
+                case $btnSoundOff:
+                    $videoHeader.muted = false;
+                    e.target.style = 'display: none';
+                    $btnSoundOn.style = 'display: inline-block';
+                break;
 
-                    case $btnMenu:
-                        $btnMenu.classList.add('is-active')
-                        $menuMobile.classList.add('is-active');
-                    break;
+                case $btnSoundOn:
+                    $videoHeader.muted = true;
+                    e.target.style = 'display: none';
+                    $btnSoundOff.style = 'display: inline-block';
+                break;
 
-                    case $menuMobileClose:
-                        $btnMenu.classList.remove('is-active')
-                        $menuMobile.classList.remove('is-active');
-                    break;
+                case $btnMenu:
+                    $btnMenu.classList.add('is-active')
+                    $menuMobile.classList.add('is-active');
+                break;
+
+                case $menuMobileClose:
+                    $btnMenu.classList.remove('is-active')
+                    $menuMobile.classList.remove('is-active');
+                break;
+
+                case $watchTrailer:
+                    $trailer.classList.add('is-active');
+                break;
+            }
+
+            if(location.pathname === '/'){
+                if($trailer.classList.contains('is-active')){
+                    $trailer.classList.remove('is-active');
                 }
-            })
+    
+                if(e.target.matches('#btn-play')){
+                    e.preventDefault()
+                    let id = ((e.target.parentNode).parentNode).dataset.movie;                        
+                    localStorage.setItem('movieId', id)   
+                    location.href = `${location.origin}/movie.html`;
+                }
+            }
+
+        })
 }

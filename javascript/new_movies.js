@@ -15,7 +15,8 @@ export default function newMovies(){
         json.results.forEach((el, count)=>{
             $template.getElementById('img-movie').src = `https://image.tmdb.org/t/p/w300_and_h450_bestv2${el.poster_path}`
             $template.getElementById('img-movie').alt = el.title;
-
+            $template.querySelector('article').dataset.movie = el.id;
+            
             clone = $template.cloneNode(true)
             $fragment.appendChild(clone)
 
