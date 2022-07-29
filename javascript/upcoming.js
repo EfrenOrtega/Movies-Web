@@ -9,7 +9,6 @@ export default function upcoming(){
     fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=9442d5549eb42ed94e41b7f7e58bdace')
     .then(res=> res.ok?res.json():Promise.reject(res))
     .then(json=>{
-        console.log(json.results)
 
         json.results.forEach((el, count)=>{
             $template.getElementById('img-movie').src = `https://image.tmdb.org/t/p/w300_and_h450_bestv2${el.poster_path}`

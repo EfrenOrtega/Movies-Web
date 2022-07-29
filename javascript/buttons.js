@@ -13,6 +13,12 @@ export default function buttons(){
 
         document.addEventListener('click', e=>{
 
+            if(location.pathname === '/'){
+                if($trailer.classList.contains('is-active')){
+                    $trailer.classList.remove('is-active');
+                }
+            }
+
             switch(e.target){
 
                 case $btnSoundOff:
@@ -40,12 +46,6 @@ export default function buttons(){
                 case $watchTrailer:
                     $trailer.classList.add('is-active');
                 break;
-            }
-
-            if(location.pathname === '/'){
-                if($trailer.classList.contains('is-active')){
-                    $trailer.classList.remove('is-active');
-                }
             }
             
             if(location.pathname === '/' || location.pathname === '/search.html'){

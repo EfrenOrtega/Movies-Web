@@ -62,7 +62,7 @@
                 <div class="circle" id="circles-1"></div>
 
                 <div class="btn-container"> 
-                    <button class="btn-trailer" type="button"><a href="">Ver Trailer</a></button>
+                    <button class="btn-trailer" type="button"><a href="" target="_blank">Ver Trailer</a></button>
                 </div>
 
             </header>
@@ -95,65 +95,7 @@
 
                         <section class="main-cast-container">
                             
-                            <article class="actor">
-                                <picture>
-                                    <img src="./img/character.png" alt="">
-                                </picture>
-                            </article>
 
-                            <article class="actor">
-                                <picture>
-                                    <img src="./img/character.png" alt="">
-                                </picture>
-                            </article>
-
-                            <article class="actor">
-                                <picture>
-                                    <img src="./img/character.png" alt="">
-                                </picture>
-                            </article>
-
-                            <article class="actor">
-                                <picture>
-                                    <img src="./img/character.png" alt="">
-                                </picture>
-                            </article>
-
-                            <article class="actor">
-                                <picture>
-                                    <img src="./img/character.png" alt="">
-                                </picture>
-                            </article>
-
-                            <article class="actor">
-                                <picture>
-                                    <img src="./img/character.png" alt="">
-                                </picture>
-                            </article>
-
-                            <article class="actor">
-                                <picture>
-                                    <img src="./img/character.png" alt="">
-                                </picture>
-                            </article>
-
-                            <article class="actor">
-                                <picture>
-                                    <img src="./img/character.png" alt="">
-                                </picture>
-                            </article>
-
-                            <article class="actor">
-                                <picture>
-                                    <img src="./img/character.png" alt="">
-                                </picture>
-                            </article>
-
-                            <article class="actor">
-                                <picture>
-                                    <img src="./img/character.png" alt="">
-                                </picture>
-                            </article>
 
                         </section>
 
@@ -239,11 +181,12 @@
 
 
         <template id="actor-template">
-            <div class="main-cast-container">
-                <div class="actor">
-                    <img src="./img/character.png" alt="">
-                </div>
-            </div>
+            <article class="actor">
+                <picture>
+                    <img loading="lazy" src="./img/character.png" alt="">
+                </picture>
+                <figcaption class="name-actor"></figcaption>
+            </article>
         </template>
 
 
@@ -256,38 +199,37 @@
             ], circles = [];
 
             let child = document.getElementById('circles-1'),
-                percentage = 70.10;
+                percentage = 00;
 
-            circles.push(Circles.create({
-                id:         child.id,
-                value:		percentage,
-                text:       function(value){return value + '%';},
-                radius:     60,
-                width:      10,
-                colors:     colors[0 - 1]
-            }));
+            let rating = 0;
+            let count = 0;
 
-            
+            fetch(`https://api.themoviedb.org/3/movie/${localStorage.getItem('movieId')}/reviews?api_key=9442d5549eb42ed94e41b7f7e58bdace&language=en-US&page=1`)
+            .then(res => res.ok?res.json():Promise.reject(res))
+            .then(json=>{
+                json.results.forEach(el=>{
+                    rating += el.author_details.rating || 0;
 
-            document.addEventListener('DOMContentLoaded', e=>{
-                let headerHeight = document.querySelector('header').offsetHeight
-                console.log(document.querySelector('header'))
-                console.log(headerHeight)
+                    if(el.author_details.rating !== null){
+                        count++
+                    }
 
-                window.scroll({
-                    top: headerHeight,
-                    behavior: 'smooth'
-                }) 
+                })
+                percentage = (rating/count)*10;  
                 
-            })
+                circles.push(Circles.create({
+                    id:         child.id,
+                    value:		percentage,
+                    text:       function(value){return value + '%';},
+                    radius:     60,
+                    width:      10,
+                    colors:     colors[0 - 1]
+                }));
 
-            function mouseEnter(e) {
-                e.target.lastElementChild.classList.add('is-active')
-            }
-        
-            function mouseLeave(e) {
-                e.target.lastElementChild.classList.remove('is-active')
-            }
+            })
+            .catch(err=>{
+                console.log(err)
+            });
 
         </script>
         

@@ -137,11 +137,18 @@
 
 .main-cast-container .actor{
     position: relative;
-    margin: 1em;
+    margin: 0.6em;
+}
+
+.main-cast-container .actor figcaption{
+    font-size: 0.9em;
 }
 
 .main-cast-container .actor picture img{
-    min-width:10em;
+    min-width:6em;
+    height: 6em;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 #certification{
@@ -161,6 +168,11 @@
 
     .btn-container{
         margin-top: 2em;
+    }
+
+    .main-cast-container .actor picture img{
+        min-width:7em;
+        height: 7em;
     }
 
 }

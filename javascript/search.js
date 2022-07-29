@@ -9,7 +9,6 @@ export default function search(){
     let clone = null
 
     const $loader = document.querySelector('.sk-wave')
-    console.log($loader)
 
     document.addEventListener('keyup', e=>{
         if(e.target === $searchInput){
@@ -22,7 +21,6 @@ export default function search(){
                     .then(json =>{
                         $loader.classList.remove('is-active');
 
-                        console.log(json)
                         if(json.results.length > 0){                        
                             json.results.forEach((el, count)=>{     
                                 if(el.poster_path){                        
