@@ -48,4 +48,66 @@ export default function infoMovie(){
 
     })
 
+    const $title = document.getElementById('title'),
+          $sinopsis = document.querySelector('.sinopsis'),
+          $genres = document.getElementById('genres'),
+          $certification = document.getElementById('certification'),
+          $actor = document.querySelector('main-cast-container')
+          
+    $genres.textContent = "";
+    fetch(`https://api.themoviedb.org/3/movie/${localStorage.getItem('movieId')}?api_key=9442d5549eb42ed94e41b7f7e58bdace&language=en-US`)
+    .then(res=> res.ok?res.json():Promise.reject(res))
+    .then(json=>{
+        console.log(json)
+        $title.textContent = json.title;
+        $sinopsis.textContent = json.overview
+
+        json.genres.forEach((el, count)=>{
+            if(count === 0){
+                $genres.textContent += `${el.name},`;
+            }else{
+                $genres.textContent += " "+el.name;
+            }
+        })
+
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+
+
+    fetch(`https://api.themoviedb.org/3/movie/${localStorage.getItem('movieId')}/release_dates?api_key=9442d5549eb42ed94e41b7f7e58bdace`)
+    .then(res => res.ok?res.json():Promise.reject(res))
+    .then(json=>{
+        console.log(json.results)
+        json.results.forEach(el=>{
+            if(el.iso_3166_1 === 'US'){
+                $certification.textContent = el.release_dates[0].certification
+            }
+        })
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+
+
+    fetch(`https://api.themoviedb.org/3/movie/${localStorage.getItem('movieId')}/credits?api_key=9442d5549eb42ed94e41b7f7e58bdace&language=en-US`)
+    .then(res => res.ok?res.json():Promise.reject(res))
+    .then(json=>{
+        console.log(json.cast)
+        json.cast.forEach(el=>{
+
+            if(el.known_for_department === 'Acting' && el.profile_path !== null){
+                console.log(el)
+                console.log(el.name)
+                console.log(el.profile_path)
+            }
+            
+        });
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+
+
 }

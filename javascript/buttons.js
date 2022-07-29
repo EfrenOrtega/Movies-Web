@@ -46,7 +46,9 @@ export default function buttons(){
                 if($trailer.classList.contains('is-active')){
                     $trailer.classList.remove('is-active');
                 }
-    
+            }
+            
+            if(location.pathname === '/' || location.pathname === '/search.html'){
                 if(e.target.matches('#btn-play')){
                     e.preventDefault()
                     let id = ((e.target.parentNode).parentNode).dataset.movie;                        

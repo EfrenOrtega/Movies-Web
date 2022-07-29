@@ -75,7 +75,6 @@ header{
 
 .container .header{
     background-image: none;
-    height: 15em !important;
 }
 
 .flex, .info-mobile{
@@ -158,7 +157,7 @@ header::after{
     height: 2.5em;
 }
 
-svg{
+.search-input svg{
     position: absolute;
     left: 0;
     bottom: 0;
@@ -167,7 +166,8 @@ svg{
     fill:white;
 } 
 
-svg:hover{
+
+.search-input svg:hover{
     cursor: pointer;
 }
 
@@ -318,7 +318,6 @@ footer{
     
     .container .header{
         background-image: none;
-        height: 25em !important;
     }
 
     header::after{
@@ -386,7 +385,7 @@ footer{
 
     .container .header{
         background-image: none;
-        height: 25em !important;
+        height: auto !important;
     }
 
     header::after{
