@@ -390,6 +390,10 @@
         margin-right: 1.3em;
     }
 
+    .section-top-movies .movies-top .movie{
+        margin-right: 1.5em;
+    }
+
     .section-movies .movies .movie span{
         visibility: hidden;
         opacity: 0;
