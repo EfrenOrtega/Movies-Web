@@ -1,240 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/movie.css">
-    <link rel="stylesheet" href="./css/search.css">
-    <link rel="stylesheet" href="./css/stylesIndex.css">
-    <link rel="stylesheet" href="./css/stylesMenuMobile.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/styles_movies_index.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/spinkit.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/movie.css">
+  <link rel="stylesheet" href="./css/search.css">
+  <link rel="stylesheet" href="./css/stylesIndex.css">
+  <link rel="stylesheet" href="./css/stylesMenuMobile.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/styles_movies_index.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/spinkit.css">
+  <link rel="stylesheet" href="./css/styles_menu_user.css">
+  <title>Document</title>
 </head>
 
-    <body>       
+<body>
 
-        <div class="container">
+  <div class="container">
 
-            <header class="header">
+    <header class="header">
 
-                <img id="add-watch-list" class="icon-add-watch-list" src="./img/add-to-watch-list.png" alt="">
+      <img id="add-watch-list" class="icon-add-watch-list" src="./img/add-to-watch-list.png" alt="">
 
-                <div class="flex">
-                    <div class="flex menu-hamburger">
-                        <img class="logo" src="./img/MOVIES_Logo.png" alt="">
-                        <img id="menu-hamburger" src="./img/bx_menu.png" alt="">
-                    </div>
-
-
-                    <div class="menu">
-                        <img class="logo" src="./img/MOVIES_Logo.png" alt="">
-                        <nav>
-                            <ul>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="">Watch List</a></li>
-                                <li><a href="">Genres</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    
-                    <div class="container-search-avatar">
-
-                        <div class="search">
-                            <div class="search-input">
-                                <a href="./search.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path></svg></a>
-                            </div>  
-                        </div>
-
-                        <div class="avatar">
-                            <figure>
-                                <img src="./img/woman.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-
-                </div>
-                
-                <div class="circle" id="circles-1"></div>
-
-                <div class="btn-container"> 
-                    <button class="btn-trailer" type="button"><a href="" target="_blank">Ver Trailer</a></button>
-                </div>
-
-            </header>
-
-
-            <main class="main-content">
-                <div class="container-main">
-
-                    <h1 id="title">Thor Love and Thunder</h1>
-                    <div class="info-movie">
-                        <div class="certification-container">
-                            <p id="certification">PG-13</p>
-                        </div>
-                        <div>
-                            <p id="genres"></p>
-                        </div>
-                    </div>      
-                    
-                    <div class="sinopsis-container">
-                        <p><Strong>Sinopsis:</Strong></p>
-                        <br>
-                        <p class="sinopsis">
-                            
-                        </p>
-                    </div>
-
-                    <div class="main-cast">
-                        <p><Strong>Main Cast:</Strong></p>
-                        <br>
-
-                        <section class="main-cast-container">
-                            
-
-
-                        </section>
-
-                    </div>
-                    
-                </div>
-
-
-            </main>
-
-
-            <footer>
-                <div class="container-footer">
-                    <hr class="hrLine-footer">
-
-                    <div class="flex-footer">
-                        <article class="social-medias">
-                            <a href=""><img class="logo-footer" src="./img/MOVIES_Logo.png" alt=""></a><br>
-                            <a href=""><img src="./img/icon_facebook.png" alt="Facebook">
-                            <a href=""><img src="./img/icon_twitter.png" alt="Twitter"></a>
-                        </article>
-                        <article class="menu-footer">
-                            <a href="">Home</a>
-                            <a href="">Watch List</a>
-                            <a href="">Genres</a>
-                        </article>
-                        <article class="API-footer">
-                            <a href="https://www.themoviedb.org/"><img src="./img/logo-themoviedb.svg" alt="Themoviedb"></a>
-                        </article>
-                        <article class="developer">
-                            <a href=""><img src="./img/replit.png" alt="Replit"></a>
-                            <a href=""><img src="./img/github-small.png" alt="Github"></a>
-                            <p>Developed by Jair Efren Ortega Reyes</p>
-                        </article>
-                    </div>
-
-                </div>
-            </footer>
-
-        </div>    
-
-
-        <div class="menu-mobile">
-            <div class="container">
-                <div class="menu-mobile-option">
-                    <ul>
-                        <li class="option-close"><img id="btn-close-menu" src="./img/close.png" alt=""></li>
-                        <li class="option-logo"><a href="http://192.168.1.67:5500/"><img src="./img/MOVIES_Logo.png" alt=""></a></li>
-                        <li class="option-avatar"><a href="">
-                            <div class="avatar_photo">
-                                <img src="./img/woman.jpg" alt="">
-                            <div></a>
-                        </li>
-                        <li class="option-menu option-search"><a href="./search.html"><img src="./img/buscador_mobile.png" alt=""></a></li>
-                        <li class="option-menu"><a href="">Home</a></li>
-                        <li class="option-menu"><a href="">Watch List</a></li>
-                        <li class="option-menu"><a href="">Genres</a></li>
-                        <li class="option-menu"><a href="">Sign Up</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-menu-mobile">
-                    <a href=""><img src="./img/icons_github.png" alt=""></a>
-                    <p>Jair Efren Ortega Reyes</p>
-                </div>
-
-            </div>
-
+      <div class="flex">
+        <div class="flex menu-hamburger">
+          <img class="logo" src="./img/MOVIES_Logo.png" alt="">
+          <img id="menu-hamburger" src="./img/bx_menu.png" alt="">
         </div>
 
 
-        <template id="movie-template-search">
-            <article class="movie" onmouseenter="mouseEnter(event)" onmouseleave="mouseLeave(event)" data-movie>
-                <picture>
-                    <img id="img-movie" loading="lazy" src="./img/placeholder-image.jpg" alt="Movie Poster">
-                </picture>    
-                <span class="">
-                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
-                    <a href=""><img src="./img/btn-play.png" alt="Play"></a>
-                </span> 
-            </article>
-        </template>
+        <div class="menu">
+          <img class="logo" src="./img/MOVIES_Logo.png" alt="">
+          <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="">Watch List</a></li>
+              <li><a href="">Genres</a></li>
+            </ul>
+          </nav>
+        </div>
 
 
-        <template id="actor-template">
-            <article class="actor">
-                <picture>
-                    <img loading="lazy" src="./img/character.png" alt="">
-                </picture>
-                <figcaption class="name-actor"></figcaption>
-            </article>
-        </template>
+        <div class="container-search-avatar">
+
+          <div class="search">
+            <div class="search-input">
+              <a href="./search.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path
+                    d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z">
+                  </path>
+                </svg></a>
+            </div>
+          </div>
+
+          <div class="user">
+            <div class="avatar">
+              <figure>
+                <img id="user" src="./img/woman.jpg" alt="">
+              </figure>
+            </div>
+
+            <div id="root"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="circle" id="circles-1"></div>
+
+      <div class="btn-container">
+        <button class="btn-trailer" type="button"><a href="" target="_blank">Ver Trailer</a></button>
+      </div>
+
+    </header>
 
 
-        <script src="./javascript/circles.js"></script>
+    <main class="main-content">
+      <div class="container-main">
 
-        <script>
+        <h1 id="title">Thor Love and Thunder</h1>
+        <div class="info-movie">
+          <div class="certification-container">
+            <p id="certification">PG-13</p>
+          </div>
+          <div>
+            <p id="genres"></p>
+          </div>
+        </div>
 
-            let colors = [
-                ['#D3B6C6', '#4B253A'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA'], ['#F8F9B6', '#D2D558'], ['#F4BCBF', '#D43A43']
-            ], circles = [];
+        <div class="sinopsis-container">
+          <p><Strong>Sinopsis:</Strong></p>
+          <br>
+          <p class="sinopsis">
 
-            let child = document.getElementById('circles-1'),
-                percentage = 00;
+          </p>
+        </div>
 
-            let rating = 0;
-            let count = 0;
+        <div class="main-cast">
+          <p><Strong>Main Cast:</Strong></p>
+          <br>
 
-            fetch(`https://api.themoviedb.org/3/movie/${localStorage.getItem('movieId')}/reviews?api_key=9442d5549eb42ed94e41b7f7e58bdace&language=en-US&page=1`)
-            .then(res => res.ok?res.json():Promise.reject(res))
-            .then(json=>{
-                json.results.forEach(el=>{
-                    rating += el.author_details.rating || 0;
+          <section class="main-cast-container">
 
-                    if(el.author_details.rating !== null){
-                        count++
-                    }
 
-                })
-                percentage = (rating/count)*10;  
-                
-                circles.push(Circles.create({
-                    id:         child.id,
-                    value:		percentage,
-                    text:       function(value){return value + '%';},
-                    radius:     60,
-                    width:      10,
-                    colors:     colors[0 - 1]
-                }));
 
-            })
-            .catch(err=>{
-                console.log(err)
-            });
+          </section>
 
-        </script>
-        
-        <script src="./javascript/index.js" type="module"></script>
+        </div>
 
-    </body>
+      </div>
+
+
+    </main>
+
+
+    <footer>
+      <div class="container-footer">
+        <hr class="hrLine-footer">
+
+        <div class="flex-footer">
+          <article class="social-medias">
+            <a href=""><img class="logo-footer" src="./img/MOVIES_Logo.png" alt=""></a><br>
+            <a href=""><img src="./img/icon_facebook.png" alt="Facebook">
+              <a href=""><img src="./img/icon_twitter.png" alt="Twitter"></a>
+          </article>
+          <article class="menu-footer">
+            <a href="">Home</a>
+            <a href="">Watch List</a>
+            <a href="">Genres</a>
+          </article>
+          <article class="API-footer">
+            <a href="https://www.themoviedb.org/"><img src="./img/logo-themoviedb.svg" alt="Themoviedb"></a>
+          </article>
+          <article class="developer">
+            <a href=""><img src="./img/replit.png" alt="Replit"></a>
+            <a href=""><img src="./img/github-small.png" alt="Github"></a>
+            <p>Developed by Jair Efren Ortega Reyes</p>
+          </article>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+
+  <div class="menu-mobile">
+    <div class="container">
+      <div class="menu-mobile-option">
+        <ul>
+          <li class="option-close"><img id="btn-close-menu" src="./img/close.png" alt=""></li>
+          <li class="option-logo"><a href="http://192.168.1.67:5500/"><img src="./img/MOVIES_Logo.png" alt=""></a></li>
+          <li class="option-avatar"><a href="">
+              <div class="avatar_photo">
+                <img src="./img/woman.jpg" alt="">
+                <div>
+            </a>
+          </li>
+          <li class="option-menu option-search"><a href="./search.html"><img src="./img/buscador_mobile.png" alt=""></a>
+          </li>
+          <li class="option-menu"><a href="">Home</a></li>
+          <li class="option-menu"><a href="">Watch List</a></li>
+          <li class="option-menu"><a href="">Genres</a></li>
+          <li class="option-menu"><a href="">Sign Up</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-menu-mobile">
+        <a href=""><img src="./img/icons_github.png" alt=""></a>
+        <p>Jair Efren Ortega Reyes</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <template id="movie-template-search">
+    <article class="movie" onmouseenter="mouseEnter(event)" onmouseleave="mouseLeave(event)" data-movie>
+      <picture>
+        <img id="img-movie" loading="lazy" src="./img/placeholder-image.jpg" alt="Movie Poster">
+      </picture>
+      <span class="">
+        <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+        <a href=""><img src="./img/btn-play.png" alt="Play"></a>
+      </span>
+    </article>
+  </template>
+
+
+  <template id="actor-template">
+    <article class="actor">
+      <picture>
+        <img loading="lazy" src="./img/character.png" alt="">
+      </picture>
+      <figcaption class="name-actor"></figcaption>
+    </article>
+  </template>
+
+
+  <script src="./javascript/circles.js"></script>
+
+  <script>
+
+    let colors = [
+      ['#D3B6C6', '#4B253A'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA'], ['#F8F9B6', '#D2D558'], ['#F4BCBF', '#D43A43']
+    ], circles = [];
+
+    let child = document.getElementById('circles-1'),
+      percentage = 00;
+
+    let rating = 0;
+    let count = 0;
+
+    fetch(`https://api.themoviedb.org/3/movie/${localStorage.getItem('movieId')}/reviews?api_key=9442d5549eb42ed94e41b7f7e58bdace&language=en-US&page=1`)
+      .then(res => res.ok ? res.json() : Promise.reject(res))
+      .then(json => {
+        json.results.forEach(el => {
+          rating += el.author_details.rating || 0;
+
+          if (el.author_details.rating !== null) {
+            count++
+          }
+
+        })
+        percentage = (rating / count) * 10;
+
+        circles.push(Circles.create({
+          id: child.id,
+          value: percentage,
+          text: function (value) { return value + '%'; },
+          radius: 60,
+          width: 10,
+          colors: colors[0 - 1]
+        }));
+
+      })
+      .catch(err => {
+        console.log(err)
+      });
+
+  </script>
+
+  <script src="./javascript/index.js" type="module"></script>
+
+</body>
 
 </html>

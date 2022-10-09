@@ -1,331 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./css/stylesIndex.css">
-    <link rel="stylesheet" href="./css/stylesMenuMobile.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/styles_movies_index.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./css/stylesIndex.css">
+  <link rel="stylesheet" href="./css/stylesMenuMobile.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/styles_movies_index.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/styles_menu_user.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
 
-    <div class="container">
-        
-        <header>
+  <div class="container">
 
-            <video id="video_background" autoplay muted loop defaultMuted playsinline preload="auto" poster="./img/hero-pc.png">
-                <source src="./videos/trialer-oficial.webm" type="video/mp4" />
-            </video>
+    <header>
 
-            <img id="sound-on" class="icon-video-sound-on" src="./img/sound-on.png" alt="">
-            <img id="sound-off" class="icon-video-sound-off" src="./img/sound-off.png" alt="">
+      <video id="video_background" autoplay muted loop defaultMuted playsinline preload="auto"
+        poster="./img/hero-pc.png">
+        <source src="./videos/trialer-oficial.webm" type="video/mp4" />
+      </video>
 
-
-            <div class="flex">
-                <div class="flex menu-hamburger">
-                    <img class="logo" src="./img/MOVIES_Logo.png" alt="">
-                    <img id="menu-hamburger" src="./img/bx_menu.png" alt="">
-                </div>
+      <img id="sound-on" class="icon-video-sound-on" src="./img/sound-on.png" alt="">
+      <img id="sound-off" class="icon-video-sound-off" src="./img/sound-off.png" alt="">
 
 
-                <div class="menu">
-                    <img class="logo" src="./img/MOVIES_Logo.png" alt="">
-                    <nav>
-                        <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Watch List</a></li>
-                            <li><a href="">Genres</a></li>
-                        </ul>
-                    </nav>
-                </div>
+      <div class="flex">
+        <div class="flex menu-hamburger">
+          <img class="logo" src="./img/MOVIES_Logo.png" alt="">
+          <img id="menu-hamburger" src="./img/bx_menu.png" alt="">
+        </div>
 
-                
-                <div class="container-search-avatar">
 
-                    <div class="search">
-                        <div class="search-input">
-                            <a href="./search.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path></svg></a>
-                        </div>  
-                    </div>
+        <div class="menu">
+          <img class="logo" src="./img/MOVIES_Logo.png" alt="">
+          <nav>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Watch List</a></li>
+              <li><a href="">Genres</a></li>
+            </ul>
+          </nav>
+        </div>
 
-                    <div class="avatar">
-                        <figure>
-                            <img src="./img/woman.jpg" alt="">
-                        </figure>
-                    </div>
-                </div>
 
+        <div class="container-search-avatar">
+
+          <div class="search">
+            <div class="search-input">
+              <a href="./search.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path
+                    d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z">
+                  </path>
+                </svg></a>
+            </div>
+          </div>
+
+          <div class="user">
+            <div class="avatar">
+              <figure>
+                <img id="user" src="./img/woman.jpg" alt="">
+              </figure>
             </div>
 
-            <div class="info-mobile">
- 
-                <figure>
-                    <img src="./img/image 4.png" alt="">
-                </figure>
-                <figure>
-                    <img src="./img/valoration-star.png" alt="">
-                </figure>
-
-                <div class="btns-mobil">
-                    <button class="btn-watch-now" type="button">Watch Now</button>
-                    <button class="btn-watch-list" type="button">Add to Watch List</button>
-                </div>
-
-            </div>
-
-            <div class="info-pc-container">
-                <div class="info-pc">
-                    <figure class="logo-movie">
-                        <img src="./img/logo-movie-pc.png" alt="">
-                    </figure>
-                    <figure class="valoration-stars">
-                        <img src="./img/valoration-star.png" alt="">
-                    </figure>
-                    <p>
-                        After more than 30 years of service as one of the Navy's top aviators, 
-                        Pete "Maverick" Mitchell is where he belongs, pushing the envelope as 
-                        a courageous test pilot and dodging the advancement in rank that would
-                        ground him.
-                    </p>
-                    <div class="btns-pc">
-                        <button class="btn-watch-now" type="button">Watch Now</button>
-                        <button class="btn-watch-list" type="button">Add to Watch List</button>
-                    </div>
-
-                </div>
-            </div>
-
-
-        </header>
-        <main class="main-content">
-            <div class="container-main">
-
-                <section class="section-genres">
-                    <section class="container-genres">
-                        <button><a href="">Action</a></button>
-                        <button> <a href="">Fiction</a></button>
-                        <button><a href="">Adventure</a></button>
-                        <button><a href="">Animation</a></button>
-                        <button><a href="">Crime</a></button>
-                    </section>                    
-                </section>
-
-                <section id="trends-now" class="section-movies">
-                    <div class="container-movies-1">
-                        <div class="container-info-movies">
-                            <div>
-                                <div class="flex">
-                                    <img src="./img/trend-up.png" alt="">
-                                    <p class="title-section">Trends Now</p>
-                                </div>
-                                <p class="description-section">Watch the most popular movies</p>
-                            </div>
-
-                            <div class="arrows">
-                                <img id="arrow-left" data-id="0" src="./img/icon-arrow-left.png" alt="">
-                                <img id="arrow-right" data-id="0" src="./img/icon_arrow-right.png" alt="">
-                            </div>
-                        </div>                        
-                        <div class="container-gradient">
-                            <div class="movies movies-carrousel">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section-top-movies">
-                    <div class="container-info-movies">
-                        <p class="title-section"><strong>TOP</strong></p>
-                        <p class="description-section">The Top 3 this Week</p>
-                    </div>    
-                    <div class="movies-top">
-                            <article class="movie">
-                                <picture>
-                                    <source srcset="img/Movie-A-quiet-Place-Part-II-pc.png" media="(min-width: 1035px)">
-                                    <img loading="lazy" src="./img/Movie-A-quiet-Place-Part-II.png" alt="A quite place part II">
-                                </picture> 
-                                <span>
-                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
-                                    <img src="./img/btn-play.png" alt="Play">
-                                </span>                               
-                            </article>                        
-
-                            <article class="movie">
-                                <picture>
-                                    <source srcset="img/Movie-Joker-large.png" media="(min-width: 1035px)">
-                                    <img loading="lazy" src="./img/Movie-Joker.png" alt="Joker">
-                                </picture>  
-                                <span>
-                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
-                                    <img src="./img/btn-play.png" alt="Play">
-                                </span>  
-                            </article>
-
-                            <article class="movie">
-                                <picture>
-                                    <source srcset="img/Movie-Dune-large.png" media="(min-width: 1035px)">
-                                    <img loading="lazy" src="./img/Movie-Dune.png" alt="Joker">
-                                </picture>   
-                                <span>
-                                    <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
-                                    <img src="./img/btn-play.png" alt="Play">
-                                </span>  
-                            </article>
-                    </div>
-                </section>
-                
-                <section id="new-movies" class="section-movies">
-                    <div class="container-movies-1">
-                        <div class="container-info-movies">
-                            <div>
-                                <div class="flex">
-                                    <img src="./img/icon-movies.png" alt="">
-                                    <p class="title-section">New Movies</p>
-                                </div>
-                            </div>
-
-
-                            <div class="arrows">
-                                <img id="arrow-left" data-id="1" src="./img/icon-arrow-left.png" alt="">
-                                <img id="arrow-right" data-id="1" src="./img/icon_arrow-right.png" alt="">
-                            </div>
-                        </div>  
-                        <div class="container-gradient">
-                            <div class="movies movies-carrousel">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section-movie">
-                    <div class="container-movie"> 
-                        <figure>
-                            <img src="./img/The Black Phone.jpg" alt="">
-                        </figure>
-                        <span>
-                            <h3>Premiere</h3>
-                            <div class="info-movie">
-                                <button id="watch-trailer">Watch Trailer</button>
-                                <img src="./img/The Black Phone-title.png" alt="">   
-                            </div>   
-                        </span>
-                    </div>
-                </section>
-
-                <section id="upcoming-releases" class="section-movies">
-                    <div class="container-movies-1">
-                        <div class="container-info-movies">
-                            <div>
-                                <div class="flex">
-                                    <img src="./img/icon-megaphone.png" alt="">
-                                    <p class="title-section">Upcoming Releases</p>
-                                </div>
-                            </div>
-
-                            <div class="arrows">
-                                <img id="arrow-left" data-id="2" src="./img/icon-arrow-left.png" alt="">
-                                <img id="arrow-right"  data-id="2" src="./img/icon_arrow-right.png" alt="">
-                            </div>
-                            
-                        </div>  
-                        <div class="container-gradient">
-                            <div class="movies movies-carrousel">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            
-        </main>
-        <footer>
-            <div class="container-footer">
-                <hr class="hrLine-footer">
-
-                <div class="flex-footer">
-                    <article class="social-medias">
-                        <a href=""><img class="logo-footer" src="./img/MOVIES_Logo.png" alt=""></a><br>
-                        <a href=""><img src="./img/icon_facebook.png" alt="Facebook">
-                        <a href=""><img src="./img/icon_twitter.png" alt="Twitter"></a>
-                    </article>
-                    <article class="menu-footer">
-                        <a href="">Home</a>
-                        <a href="">Watch List</a>
-                        <a href="">Genres</a>
-                    </article>
-                    <article class="API-footer">
-                        <a href="https://www.themoviedb.org/"><img src="./img/logo-themoviedb.svg" alt="Themoviedb"></a>
-                    </article>
-                    <article class="developer">
-                        <a href="https://replit.com/@EfrenOR" target="_blank"><img src="./img/replit.png" alt="Replit"></a>
-                        <a href="https://github.com/EfrenOR" target="_blank"><img src="./img/github-small.png" alt="Github"></a>
-                        <p>Developed by Jair Efren Ortega Reyes</p>
-                    </article>
-                </div>
-
-            </div>
-        </footer>
-    </div>
-
-    <div class="video-trailer">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/XhcEnHDKHco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <div class="menu-mobile">
-        <div class="container">
-            <div class="menu-mobile-option">
-                <ul>
-                    <li class="option-close"><img id="btn-close-menu" src="./img/close.png" alt=""></li>
-                    <li class="option-logo"><a href=""><img src="./img/MOVIES_Logo.png" alt=""></a></li>
-                    <li class="option-avatar"><a href="">
-                        <div class="avatar_photo">
-                            <img src="./img/woman.jpg" alt="">
-                        <div></a>
-                    </li>
-                    <li class="option-menu option-search"><a href="./search.html"><img src="./img/buscador_mobile.png" alt=""></a></li>
-                    <li class="option-menu"><a href="">Home</a></li>
-                    <li class="option-menu"><a href="">Watch List</a></li>
-                    <li class="option-menu"><a href="">Genres</a></li>
-                    <li class="option-menu"><a href="">Sign Up</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-menu-mobile">
-                <a href=""><img src="./img/icons_github.png" alt=""></a>
-                <p>Jair Efren Ortega Reyes</p>
-            </div>
+            <div id="root"></div>
+          </div>
 
         </div>
 
+      </div>
+
+      <div class="info-mobile">
+
+        <figure>
+          <img src="./img/image 4.png" alt="">
+        </figure>
+        <figure>
+          <img src="./img/valoration-star.png" alt="">
+        </figure>
+
+        <div class="btns-mobil">
+          <button class="btn-watch-now" type="button">Watch Now</button>
+          <button class="btn-watch-list" type="button">Add to Watch List</button>
+        </div>
+
+      </div>
+
+      <div class="info-pc-container">
+        <div class="info-pc">
+          <figure class="logo-movie">
+            <img src="./img/logo-movie-pc.png" alt="">
+          </figure>
+          <figure class="valoration-stars">
+            <img src="./img/valoration-star.png" alt="">
+          </figure>
+          <p>
+            After more than 30 years of service as one of the Navy's top aviators,
+            Pete "Maverick" Mitchell is where he belongs, pushing the envelope as
+            a courageous test pilot and dodging the advancement in rank that would
+            ground him.
+          </p>
+          <div class="btns-pc">
+            <button class="btn-watch-now" type="button">Watch Now</button>
+            <button class="btn-watch-list" type="button">Add to Watch List</button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+
+    <main class="main-content">
+      <div class="container-main">
+
+        <section class="section-genres">
+          <section class="container-genres">
+            <button><a href="">Action</a></button>
+            <button> <a href="">Fiction</a></button>
+            <button><a href="">Adventure</a></button>
+            <button><a href="">Animation</a></button>
+            <button><a href="">Crime</a></button>
+          </section>
+        </section>
+
+        <section id="trends-now" class="section-movies">
+          <div class="container-movies-1">
+            <div class="container-info-movies">
+              <div>
+                <div class="flex">
+                  <img src="./img/trend-up.png" alt="">
+                  <p class="title-section">Trends Now</p>
+                </div>
+                <p class="description-section">Watch the most popular movies</p>
+              </div>
+
+              <div class="arrows">
+                <img id="arrow-left" data-id="0" src="./img/icon-arrow-left.png" alt="">
+                <img id="arrow-right" data-id="0" src="./img/icon_arrow-right.png" alt="">
+              </div>
+            </div>
+            <div class="container-gradient">
+              <div class="movies movies-carrousel">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-top-movies">
+          <div class="container-info-movies">
+            <p class="title-section"><strong>TOP</strong></p>
+            <p class="description-section">The Top 3 this Week</p>
+          </div>
+          <div class="movies-top">
+            <article class="movie">
+              <picture>
+                <source srcset="img/Movie-A-quiet-Place-Part-II-pc.png" media="(min-width: 1035px)">
+                <img loading="lazy" src="./img/Movie-A-quiet-Place-Part-II.png" alt="A quite place part II">
+              </picture>
+              <span>
+                <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                <img src="./img/btn-play.png" alt="Play">
+              </span>
+            </article>
+
+            <article class="movie">
+              <picture>
+                <source srcset="img/Movie-Joker-large.png" media="(min-width: 1035px)">
+                <img loading="lazy" src="./img/Movie-Joker.png" alt="Joker">
+              </picture>
+              <span>
+                <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                <img src="./img/btn-play.png" alt="Play">
+              </span>
+            </article>
+
+            <article class="movie">
+              <picture>
+                <source srcset="img/Movie-Dune-large.png" media="(min-width: 1035px)">
+                <img loading="lazy" src="./img/Movie-Dune.png" alt="Joker">
+              </picture>
+              <span>
+                <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+                <img src="./img/btn-play.png" alt="Play">
+              </span>
+            </article>
+          </div>
+        </section>
+
+        <section id="new-movies" class="section-movies">
+          <div class="container-movies-1">
+            <div class="container-info-movies">
+              <div>
+                <div class="flex">
+                  <img src="./img/icon-movies.png" alt="">
+                  <p class="title-section">New Movies</p>
+                </div>
+              </div>
+
+
+              <div class="arrows">
+                <img id="arrow-left" data-id="1" src="./img/icon-arrow-left.png" alt="">
+                <img id="arrow-right" data-id="1" src="./img/icon_arrow-right.png" alt="">
+              </div>
+            </div>
+            <div class="container-gradient">
+              <div class="movies movies-carrousel">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-movie">
+          <div class="container-movie">
+            <figure>
+              <img src="./img/The Black Phone.jpg" alt="">
+            </figure>
+            <span>
+              <h3>Premiere</h3>
+              <div class="info-movie">
+                <button id="watch-trailer">Watch Trailer</button>
+                <img src="./img/The Black Phone-title.png" alt="">
+              </div>
+            </span>
+          </div>
+        </section>
+
+        <section id="upcoming-releases" class="section-movies">
+          <div class="container-movies-1">
+            <div class="container-info-movies">
+              <div>
+                <div class="flex">
+                  <img src="./img/icon-megaphone.png" alt="">
+                  <p class="title-section">Upcoming Releases</p>
+                </div>
+              </div>
+
+              <div class="arrows">
+                <img id="arrow-left" data-id="2" src="./img/icon-arrow-left.png" alt="">
+                <img id="arrow-right" data-id="2" src="./img/icon_arrow-right.png" alt="">
+              </div>
+
+            </div>
+            <div class="container-gradient">
+              <div class="movies movies-carrousel">
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </main>
+    <footer>
+      <div class="container-footer">
+        <hr class="hrLine-footer">
+
+        <div class="flex-footer">
+          <article class="social-medias">
+            <a href=""><img class="logo-footer" src="./img/MOVIES_Logo.png" alt=""></a><br>
+            <a href=""><img src="./img/icon_facebook.png" alt="Facebook">
+              <a href=""><img src="./img/icon_twitter.png" alt="Twitter"></a>
+          </article>
+          <article class="menu-footer">
+            <a href="">Home</a>
+            <a href="">Watch List</a>
+            <a href="">Genres</a>
+          </article>
+          <article class="API-footer">
+            <a href="https://www.themoviedb.org/"><img src="./img/logo-themoviedb.svg" alt="Themoviedb"></a>
+          </article>
+          <article class="developer">
+            <a href="https://replit.com/@EfrenOR" target="_blank"><img src="./img/replit.png" alt="Replit"></a>
+            <a href="https://github.com/EfrenOR" target="_blank"><img src="./img/github-small.png" alt="Github"></a>
+            <p>Developed by Jair Efren Ortega Reyes</p>
+          </article>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+
+  <div class="video-trailer">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XhcEnHDKHco" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="menu-mobile">
+    <div class="container">
+      <div class="menu-mobile-option">
+        <ul>
+          <li class="option-close"><img id="btn-close-menu" src="./img/close.png" alt=""></li>
+          <li class="option-logo"><a href=""><img src="./img/MOVIES_Logo.png" alt=""></a></li>
+          <li class="option-avatar"><a href="">
+              <div class="avatar_photo">
+                <img src="./img/woman.jpg" alt="">
+                <div>
+            </a>
+          </li>
+          <li class="option-menu option-search"><a href="./search.html"><img src="./img/buscador_mobile.png" alt=""></a>
+          </li>
+          <li class="option-menu"><a href="">Home</a></li>
+          <li class="option-menu"><a href="">Watch List</a></li>
+          <li class="option-menu"><a href="">Genres</a></li>
+          <li class="option-menu"><a href="">Sign Up</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-menu-mobile">
+        <a href=""><img src="./img/icons_github.png" alt=""></a>
+        <p>Jair Efren Ortega Reyes</p>
+      </div>
+
     </div>
 
+  </div>
 
-    <template id="movie-template">
-        <article class="movie" onmouseenter="mouseEnter(event)" onmouseleave="mouseLeave(event)">
-            <picture>
-                <img id="img-movie" loading="lazy" src="./img/placeholder-image.jpg" alt="Movie Poster">
-            </picture>    
-            <span class="">
-                <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
-                <img id="btn-play" src="./img/btn-play.png" alt="Play">
-            </span> 
-        </article>
-    </template>
 
-    <script>
-        function mouseEnter(e) {
-            e.target.lastElementChild.classList.add('is-active')
-        }
-    
-        function mouseLeave(e) {
-            e.target.lastElementChild.classList.remove('is-active')
-        }
-    </script>
+  <template id="movie-template">
+    <article class="movie" onmouseenter="mouseEnter(event)" onmouseleave="mouseLeave(event)">
+      <picture>
+        <img id="img-movie" loading="lazy" src="./img/placeholder-image.jpg" alt="Movie Poster">
+      </picture>
+      <span class="">
+        <img class="btn-add-watch-list" src="./img/add-to-watch-list.png" alt="add to watch list">
+        <img id="btn-play" src="./img/btn-play.png" alt="Play">
+      </span>
+    </article>
+  </template>
 
-    <script src="./javascript/index.js" type="module"></script>
+  <script>
+    function mouseEnter(e) {
+      e.target.lastElementChild.classList.add('is-active')
+    }
 
+    function mouseLeave(e) {
+      e.target.lastElementChild.classList.remove('is-active')
+    }
+  </script>
+
+
+  <script src="./javascript/index.js" type="module"></script>
 </body>
+
 </html>

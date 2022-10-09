@@ -27,7 +27,9 @@ class ModelUsers():
   def __init__(self):
     pass
 
-  
+  #=========================
+  #    Obtener Usuarios
+  #=========================
   def get_users(self):
     users = []
     for data in self.cUsers.find():
@@ -39,6 +41,10 @@ class ModelUsers():
       })
     return jsonify(users)
 
+
+  #=========================
+  #     Crear Cuentas
+  #=========================
   def create_account(self):
     res = self.cAccount.insert_one({
       'username':request.json['username'],
@@ -49,6 +55,10 @@ class ModelUsers():
     #Respuesta
     return jsonify({'id_account':str(res.inserted_id)}) 
 
+
+  #=========================
+  #     Crear Usuarios
+  #=========================
   def create_user(self):
 
     #Validar que el usuario no exista
@@ -83,6 +93,9 @@ class ModelUsers():
       return jsonify({'status':'false', 'message':'Error al conectar con DB o No se enviaron todos los datos necesarios'})
     
   
+  #==================================
+  #     Autenticación de Usuarios
+  #==================================
   def auth_user(self):
 
     user = self.cAccount.find_one({'username':request.json['username']})
@@ -94,8 +107,12 @@ class ModelUsers():
     return jsonify({'status':'false', 'message':'Usuario o Contraseña Incorrectos'})
   
 
-
+  #===================================================================================================
+  #                                     Subir imagenes a Filebase
+  #
   #Subir las imagenes de este servidor a un sistema de almacenamiento externo https://filebase.com/
+  #Recuper la URL de la imagen subida y esa guardarla en MongoDB
+  #===================================================================================================
   def upload_to_filebase(self):
     CDI = None
 
