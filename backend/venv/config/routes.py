@@ -6,7 +6,9 @@ from controllers.controller import getUsers,create_users, create_account, auth_u
 
 blueprint = Blueprint('blueprint', __name__)
 
-#Route para users
+#=========================
+#  RUTAS PARA USUARIOS
+#=========================
 blueprint.route('/users', methods=['GET'])(getUsers)
 blueprint.route('/createaccount', methods=['POST'])(create_users)
 
