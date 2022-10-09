@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/auth.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="container-login">
+
+      <div class="backgroud-image">
+      </div>
+
+      <div class="form-auth">
+        <div id="form-login" class="form-auth-container is-active">
+          <img src="../img/MOVIES_Logo_black.png" alt="">
+          <h2>Hello Again</h2>
+          <form action="">
+            <input type="text" placeholder="UserName" name="username">
+            <input type="password" placeholder="Password" name="password">
+
+            <input type="submit" value="LOGIN">
+            <a id="forgot-password" href="">Forgot password?</a>
+          </form>
+          <span id="link-sign-up">Need a Account? <a href="" id="signUp">Sign Up</a></span>
+        </div>
+
+        <div id="form-signUp" class="form-auth-container">
+          <img src="../img/MOVIES_Logo_black.png" alt="">
+          <h2>Hello There!</h2>
+          <form id="signUp-1">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email" name="email" required>
+            <input type="date" name="date" required>
+
+            <label class="custom-file-upload">
+              <input type="file" />
+              Upload File
+            </label>
+
+
+            <input id="btn-next" type="submit" value="Next">
+          </form>
+          <span id="link-sign-up">Already a User? <a href="" id="login">LOGIN</a></span>
+        </div>
+
+        <div id="form-signUp-2" class="form-auth-container">
+          <img src="../img/MOVIES_Logo_black.png" alt="">
+          <h2>Hello There!</h2>
+          <p>Authentication Data</p>
+          <form action="">
+            <input type="text" placeholder="UserName" name="username">
+            <input type="password" placeholder="Password" name="password">
+
+            <input type="submit" value="SIGN UP">
+            <a id="previous" href="">Back</a>
+
+
+          </form>
+          <span id="link-sign-up">Already a User? <a href="" id="login-2">LOGIN</a></span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../javascript/index.js" type="module"></script>
+</body>
+
+</html>

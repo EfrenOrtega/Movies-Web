@@ -27,6 +27,10 @@ const openPage = () => {
         case 'logout':
           alert('logout')
           break;
+
+        case 'login':
+          location.href = '../pages/auth.html'
+          break;
       }
 
 
@@ -55,11 +59,19 @@ export function MenuUser() {
   </div>`
   $li2.id = "settings"
 
-  $li3.innerHTML = `<div class="options-menu-user">
-    <img src="./img/icon-logout.png"> 
-    <span>Log Out</span>
-  </div>`
-  $li3.id = "logout"
+  if (!localStorage.getItem('login', true)) {
+    $li3.innerHTML = `<div class="options-menu-user">
+      <img src="./img/icon-login.png"> 
+      <span>Log In</span>
+    </div>`
+    $li3.id = "login"
+  } else {
+    $li3.innerHTML = `<div class="options-menu-user">
+      <img src="./img/icon-logout.png"> 
+      <span>Log Out</span>
+    </div>`
+    $li3.id = "logout"
+  }
 
   $menu.classList.add('menu-user');
   $menu.appendChild($ul)

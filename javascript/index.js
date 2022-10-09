@@ -9,12 +9,15 @@ import infoMovie from './info_movie.js';
 
 import { App } from './App.js';
 
-document.addEventListener('DOMContentLoaded', e => {
-  //App inicia componentes UI para reutilización
-  App();
-})
+
 
 if (location.pathname === '/') {
+
+  document.addEventListener('DOMContentLoaded', e => {
+    //App inicia componentes UI para reutilización
+    App();
+  })
+
   trendsMovie();
   newMovies();
   upcoming();
@@ -40,4 +43,8 @@ if (methodDevices.isMobile.any()) {
   arrows.forEach(el => {
     el.classList.add('is-no-active')
   })
+}
+
+if (location.pathname === '/pages/auth.html') {
+  actionButtons();
 }
