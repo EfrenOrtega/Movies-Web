@@ -11,7 +11,10 @@ from models.mongodb import Conexion
 import boto3
 
 import os
+from werkzeug.utils import secure_filename
 
+#Para crear nombre aleatorios para guardar las imagenes (Avatars)
+import uuid
 
 class ModelUsers():
 
@@ -21,8 +24,9 @@ class ModelUsers():
   cAccount = db.Account
 
   id=""
+  username = None
   urlImage = None
-  nameImage = None
+  nameImage = None  
 
   def __init__(self):
     pass
@@ -40,6 +44,15 @@ class ModelUsers():
         'dateOnBirth':data['dateOnBirth'],
       })
     return jsonify(users)
+
+
+  def get_user(self):
+    #Validar que el usuario no exista
+    userStatus = self.cAccount.find_one({'username':self.username})
+    if(userStatus):
+      return jsonify({'status':False, 'message':'El Usuario ya Existe'})
+
+    return jsonify({'status':True, 'message':'El usuario no Existe'})
 
 
   #=========================
@@ -60,11 +73,10 @@ class ModelUsers():
   #     Crear Usuarios
   #=========================
   def create_user(self):
-
     #Validar que el usuario no exista
     userStatus = self.cAccount.find_one({'username':request.json['username']})
     if(userStatus):
-      return jsonify({'status':'false', 'message':'Se ha cancelado la operación porque el username ya existe'})
+      return jsonify({'status':False, 'message':'Se ha cancelado la operación porque el username ya existe'})
 
 
     #Convertir JSON a Diccionario
@@ -72,10 +84,9 @@ class ModelUsers():
 
     #Validar los datos
     if(data.get("name") and data.get("email") and data.get("dateOnBirth") 
-    and data.get("avatar") and data.get("password") and data.get("username")):
+     and data.get("password") and data.get("username") and self.nameImage):   
 
       #Subir la imagen del usuario a https://filebase.com/
-      self.nameImage = request.json['avatar']
       self.upload_to_filebase()
 
       res = self.cUsers.insert_one({
@@ -86,12 +97,36 @@ class ModelUsers():
       }) 
           
       self.id = str(res.inserted_id)
-    
+      self.nameImage = None
       #Respuesta
       return self.create_account()
     else:
-      return jsonify({'status':'false', 'message':'Error al conectar con DB o No se enviaron todos los datos necesarios'})
+      return jsonify({'status':False, 'message':'Error al conectar con DB o No se enviaron todos los datos necesarios'})
     
+  
+  def uploadFile(self):
+    try:
+
+      #Subir imagen a este servidor flask
+      file = request.files['file']
+      Path = os.path.join(os.path.dirname(__file__))    
+      UPLOAD_FOLDER = os.path.join(os.path.dirname(Path), 'images')
+
+      filename = secure_filename(file.filename)
+      extension = os.path.splitext(filename)[1]
+
+      newName = str(uuid.uuid4()) + extension
+
+      upload_path = os.path.join(UPLOAD_FOLDER, newName)
+      
+      file.save(upload_path)
+
+      self.nameImage = newName
+    
+      return jsonify({'status':True, 'message':'Imagen Subida al servidor Flask'})
+    except ClientError as e:
+      print('error: %s') % e
+      return jsonify({'status':False, 'message':'Error al Subir la Imagen'})
   
   #==================================
   #     Autenticación de Usuarios
@@ -104,7 +139,7 @@ class ModelUsers():
       if(user['password'] == request.json['password']):
         return jsonify({'status':'true', 'msg':'Auth'}) 
 
-    return jsonify({'status':'false', 'message':'Usuario o Contraseña Incorrectos'})
+    return jsonify({'status':False, 'message':'Usuario o Contraseña Incorrectos'})
   
 
   #===================================================================================================
@@ -131,11 +166,11 @@ class ModelUsers():
     with open(pathImage, 'rb') as data:
       try:    
 
-        #Insertar objeto al bucket "test-31022002"
+        #Insertar objeto al bucket "movies-3077"
         request = s3.put_object(
           Body=data,
-          Bucket="test-31022002", 
-          Key = "Avatar5.png", 
+          Bucket="movies-3077", 
+          Key = self.nameImage, 
           ContentType = 'imagen/jpeg'
         )
         

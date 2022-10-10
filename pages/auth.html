@@ -22,10 +22,11 @@
         <div id="form-login" class="form-auth-container is-active">
           <img src="../img/MOVIES_Logo_black.png" alt="">
           <h2>Hello Again</h2>
-          <form action="">
-            <input type="text" placeholder="UserName" name="username">
-            <input type="password" placeholder="Password" name="password">
+          <form id="login-form">
+            <input id="username" type="text" placeholder="UserName" name="username" required>
+            <input id="password" type="password" placeholder="Password" name="password" required>
 
+            <span class="warning"></span>
             <input type="submit" value="LOGIN">
             <a id="forgot-password" href="">Forgot password?</a>
           </form>
@@ -41,11 +42,11 @@
             <input type="date" name="date" required>
 
             <label class="custom-file-upload">
-              <input type="file" />
+              <input type="file" name="file" />
               Upload File
             </label>
 
-
+            <span class="warning"></span>
             <input id="btn-next" type="submit" value="Next">
           </form>
           <span id="link-sign-up">Already a User? <a href="" id="login">LOGIN</a></span>
@@ -55,13 +56,13 @@
           <img src="../img/MOVIES_Logo_black.png" alt="">
           <h2>Hello There!</h2>
           <p>Authentication Data</p>
-          <form action="">
-            <input type="text" placeholder="UserName" name="username">
-            <input type="password" placeholder="Password" name="password">
+          <form id="signUp-2">
+            <input type="text" placeholder="UserName" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
 
+            <span class="warning"></span>
             <input type="submit" value="SIGN UP">
             <a id="previous" href="">Back</a>
-
 
           </form>
           <span id="link-sign-up">Already a User? <a href="" id="login-2">LOGIN</a></span>

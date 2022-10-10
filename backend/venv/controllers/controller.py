@@ -15,3 +15,10 @@ def create_account():
 
 def auth_user():
   return users.auth_user()
+
+def upload_file():
+  return users.uploadFile()
+
+def get_user(username):
+  users.username = username
+  return users.get_user()
